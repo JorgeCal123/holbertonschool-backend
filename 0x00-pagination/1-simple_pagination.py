@@ -5,7 +5,6 @@ import math
 from typing import List, Tuple
 
 
-
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -13,10 +12,6 @@ class Server:
 
     def __init__(self):
         self.__dataset = None
-
-
-
-
 
     def dataset(self) -> List[List]:
         """Cached dataset
@@ -39,11 +34,12 @@ class Server:
         assert page_size != 0
         [start, end] = index_range(page, page_size)
         data = self.dataset()
-        return  data[start: end]
+        return data[start: end]
+
 
 def index_range(page: int, page_size: int) -> Tuple:
     """
-    function named index_range that takes two 
+    function named index_range that takes two
     integer arguments page and page_size
     """
     size_index = page * page_size
