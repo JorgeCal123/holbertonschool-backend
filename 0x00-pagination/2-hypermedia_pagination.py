@@ -47,13 +47,14 @@ class Server:
             dict['next_page'] = page + 1
         else:
             dict['next_page'] = None
-        if (page == 1 ):
+        if (page == 1):
             dict['prev_page'] = None
         else:
             dict['prev_page'] = page - 1
         dict['total_pages'] = total_page
 
         return dict
+
 
 def index_range(page: int, page_size: int) -> Tuple:
     """
