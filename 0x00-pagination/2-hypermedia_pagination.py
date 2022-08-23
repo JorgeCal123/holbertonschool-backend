@@ -50,7 +50,7 @@ class Server:
             dict['prev_page'] = None
         else:
             dict['prev_page'] = page - 1
-        dict['total_page'] = total_page
+        dict['total_pages'] = total_page
 
         return dict
 
