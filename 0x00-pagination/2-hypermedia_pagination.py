@@ -37,6 +37,7 @@ class Server:
         return data[start: end]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+        """method that return a dict"""
         dict = {}
         dict['page_size'] = page_size
         dict['page'] = page
