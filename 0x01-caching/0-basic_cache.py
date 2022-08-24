@@ -4,6 +4,7 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """Class BasicCache"""
 
     def __init__(self):
         """method constructor"""
