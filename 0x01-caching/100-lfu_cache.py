@@ -11,6 +11,7 @@ class LFUCache(BaseCaching):
     age = 0
 
     def __init__(self):
+        """method constructor"""
         super().__init__()
 
     def put(self, key, item):
@@ -38,3 +39,11 @@ class LFUCache(BaseCaching):
         self.age_data[key] = self.age
         self.age += 1
         return self.cache_data[key]
+
+    def print_cache(self):
+        """ Print the cache
+        """
+        print("Current cache:")
+        for key in sorted(self.cache_data.keys()):
+            print("{}: {} {}".format(key, self.cache_data.get(key), self.age_data[key]))
+
