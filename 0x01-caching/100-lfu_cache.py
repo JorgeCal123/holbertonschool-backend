@@ -36,7 +36,5 @@ class LFUCache(BaseCaching):
         if key is None or key not in self.cache_data:
             return None
         self.age_data[key] = self.age
-        sort_age = sorted(self.age_data.items(),
-                          key=operator.itemgetter(1))
         self.age += 1
         return self.cache_data[key]
