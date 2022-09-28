@@ -1,6 +1,7 @@
-var kue = require('kue'), queue = kue.createQueue();
+var kue = require('kue')
+const queue = kue.createQueue();
 
-const obj = { phoneNumber: "1234", message: "new message" }
+const obj = { phoneNumber: "4153518780", message: "This is the code to verify your account" }
 
 var job = queue.create('push_notification_code', obj).save(function(err){
    if( !err ) 
